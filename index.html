@@ -38,12 +38,6 @@
             scroll-behavior: smooth;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
         a {
             text-decoration: none;
             color: var(--primary-blue);
@@ -73,6 +67,8 @@
         }
 
         .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -98,7 +94,7 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(to right, #e0f2f7, var(--white)); /* Light gradient background */
+            background: linear-gradient(to right, #e0f2f7, var(--white));
             padding: 80px 0;
             display: flex;
             align-items: center;
@@ -106,6 +102,8 @@
         }
 
         .hero-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             gap: 40px;
@@ -169,12 +167,11 @@
         }
 
         .cta-button:hover {
-            background-color: #218838; /* Darker green */
+            background-color: #218838;
             transform: translateY(-3px);
             box-shadow: 0 12px 25px rgba(40, 167, 69, 0.4);
         }
 
-        /* Pulse animation for CTA button */
         .pulse {
             animation: pulse 2s infinite;
         }
@@ -193,7 +190,6 @@
             padding-left: 15px;
             margin-top: 20px;
         }
-
 
         /* Benefits Section */
         .benefits-section {
@@ -274,6 +270,13 @@
             padding: 70px 0;
             text-align: center;
             margin-top: 60px;
+            width: 100vw; /* Full viewport width for landscape match */
+            left: 0;
+        }
+
+        .cta-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .cta-content h2 {
@@ -307,9 +310,13 @@
             padding: 30px 0;
             text-align: center;
             font-size: 0.9em;
+            width: 100vw; /* Full viewport width for landscape match */
+            left: 0;
         }
 
         .main-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -335,121 +342,37 @@
                 flex-direction: column;
                 text-align: center;
             }
-
             .hero-image {
                 margin-top: 40px;
             }
-
-            .hero-content h1 {
-                font-size: 2.5em;
-            }
-
-            .hero-content .subheadline {
-                font-size: 1.4em;
-            }
-
-            .cta-button {
-                font-size: 1.15em;
-                padding: 15px 30px;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
             .cta-content h2 {
                 font-size: 2em;
+            }
+            .cta-content p {
+                font-size: 1em;
             }
         }
 
         @media (max-width: 768px) {
-            .main-header {
-                padding: 10px 0;
-            }
-
-            .logo {
-                font-size: 1.5em;
-            }
-
-            .nav-button {
-                padding: 8px 15px;
-                font-size: 0.9em;
-            }
-
-            .hero-section {
-                padding: 60px 0;
-                min-height: auto;
-            }
-
             .hero-content h1 {
                 font-size: 2em;
             }
-
             .hero-content .subheadline {
                 font-size: 1.1em;
             }
-
-            .hero-content .description {
-                font-size: 1em;
-            }
-
             .cta-button {
                 font-size: 1em;
                 padding: 12px 25px;
             }
-
-            .benefits-section {
-                padding: 60px 0;
-            }
-
-            .benefits-section h2 {
-                font-size: 1.8em;
-            }
-
-            .call-to-action-bottom {
-                padding: 50px 0;
-            }
-
-            .cta-content h2 {
-                font-size: 1.8em;
-            }
-
-            .cta-content p {
-                font-size: 1em;
-            }
-
-            .main-footer p, .footer-links a {
-                font-size: 0.8em;
-            }
-
-            .footer-links {
-                margin-top: 10px;
-            }
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-
             .navbar {
                 flex-direction: column;
                 gap: 15px;
             }
-            .nav-button {
-                width: 100%;
-                text-align: center;
-            }
-
             .hero-content h1 {
                 font-size: 1.8em;
-            }
-            .hero-content .subheadline {
-                font-size: 1em;
-            }
-            .success-text {
-                font-size: 1em;
-                padding-left: 10px;
             }
         }
     </style>
@@ -457,12 +380,9 @@
 <body>
 
     <header class="main-header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">Leads Hunters Team</a>
-                <!-- "যোগ দিন" বাটনে Google Form লিঙ্ক যোগ করা হয়েছে -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScfUXNYdWpe9BuUumKDlSezkA-NINDXp8m_QYsacU72W5c8Ag/viewform" target="_blank" class="nav-button">যোগ দিন</a>
-            </nav>
+        <div class="navbar">
+            <a href="#" class="logo">Leads Hunters Team</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScfUXNYdWpe9BuUumKDlSezkA-NINDXp8m_QYsacU72W5c8Ag/viewform" target="_blank" class="nav-button">যোগ দিন</a>
         </div>
     </header>
 
@@ -472,46 +392,44 @@
                 <h1>Leads Hunters Team-এ যোগ দিন!</h1>
                 <p class="subheadline">প্রতিদিন ৩,০০০ থেকে ৭,০০০ টাকা ইনকাম করুন ঘরে বসে 💰</p>
                 <p class="description">আমাদের Leads Hunters Team-এর অংশ হয়ে অনলাইন মার্কেটিং ও লিড জেনারেশন কাজের মাধ্যমে প্রতিদিন স্থায়ী ইনকাম করুন। এখনই নিচের বাটনে ক্লিক করে ফর্ম পূরণ করুন এবং ইনকাম শুরু করুন।</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScfUXNYdWpe9BuUumKDlSezkA-NINDXp8m_QYsacU72W5c8Ag/viewform" target="_blank" class="cta-button pulse" id="join-now">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScfUXNYdWpe9BuUumKDlSezkA-NINDXp8m_QYsacU72W5c8Ag/viewform" target="_blank" class="cta-button pulse">
                     <i class="fas fa-hand-pointer"></i> ফর্মটি পূরণ করুন এখনই
                 </a>
                 <p class="success-text">৫০০+ সদস্য ইতিমধ্যেই কাজ করছেন এবং প্রতিদিন ইনকাম করছেন!</p>
             </div>
-            <div class="hero-image">
-                <!-- সুন্দর ডিজাইনের ইমেজ এখানে জেনারেট করা হয়েছে -->
-<!-- <img src="https://via.placeholder.com/600x400/007bff/ffffff?text=Online+Earning+Team" alt="Leads Hunters Team - Online Earning"> -->
-</div>
-<section class="benefits-section">
-    <div class="container">
-        <h2>আমাদের সাথে কাজ করার সুবিধা</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="icon-circle">
-                    <i class="fas fa-home"></i>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>আমাদের সাথে কাজ করার সুবিধা</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>ঘরে বসে কাজের সুযোগ</h3>
+                    <p>আপনার সুবিধামত সময়ে, পৃথিবীর যেকোনো স্থান থেকে কাজ করুন।</p>
                 </div>
-                <h3>ঘরে বসে কাজের সুযোগ</h3>
-                <p>আপনার সুবিধামত সময়ে, পৃথিবীর যেকোনো স্থান থেকে কাজ করুন।</p>
-            </div>
-            <div class="benefit-card">
-                <div class="icon-circle">
-                    <i class="fas fa-sack-dollar"></i>
+                <div class="benefit-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-sack-dollar"></i>
+                    </div>
+                    <h3>দৈনিক ইনকাম নিশ্চিত</h3>
+                    <p>প্রতিদিন আপনার কাজের ফলস্বরূপ নিশ্চিত ইনকাম পান।</p>
                 </div>
-                <h3>দৈনিক ইনকাম নিশ্চিত</h3>
-                <p>প্রতিদিন আপনার কাজের ফলস্বরূপ নিশ্চিত ইনকাম পান।</p>
-            </div>
-            <div class="benefit-card">
-                <div class="icon-circle">
-                    <i class="fas fa-graduation-cap"></i>
+                <div class="benefit-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>কোনো অভিজ্ঞতা ছাড়াই শুরু</h3>
+                    <p>আমরা আপনাকে শুরু থেকে সবকিছু শিখিয়ে দেব, অভিজ্ঞতার প্রয়োজন নেই।</p>
                 </div>
-                <h3>কোনো অভিজ্ঞতা ছাড়াই শুরু</h3>
-                <p>আমরা আপনাকে শুরু থেকে সবকিছু শিখিয়ে দেব, অভিজ্ঞতার প্রয়োজন নেই।</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="call-to-action-bottom">
-    <div class="container">
+    <section class="call-to-action-bottom">
         <div class="cta-content">
             <h2>আপনার ইনকামের যাত্রা শুরু করুন আজই!</h2>
             <p>আর দেরি নয়! Leads Hunters Team-এ যোগ দিয়ে আপনার অনলাইন ইনকামের স্বপ্ন পূরণ করুন।</p>
@@ -519,10 +437,9 @@
                 <i class="fas fa-clipboard-list"></i> ফর্মটি পূরণ করুন এখনই
             </a>
         </div>
-    </div>
-</section>
+    </section>
 
- <footer class="main-footer">
+    <footer class="main-footer">
         <div class="container">
             <p>&copy; 2025 Leads Hunters Team | সর্বস্বত্ব সংরক্ষিত।</p>
             <div class="footer-links">
@@ -532,16 +449,5 @@
         </div>
     </footer>
 
-    <!-- Smooth scroll JavaScript (optional, but good for UX) -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
